@@ -1,0 +1,44 @@
+\documentclass[utf8,usehyperref,12pt]{G7-32}
+\input glyphtounicode.tex                   % Нужно для
+\pdfgentounicode=1                          % поиска по pdf в кириллице
+\usepackage[T2A]{fontenc}
+\usepackage{pscyr}
+\usepackage[utf8]{inputenc}                 % ваша любимая кодировка здесь
+\usepackage[english,russian]{babel}         % это необходимо для включения переносов
+\usepackage{float}
+\usepackage[pdftex]{graphicx}
+\usepackage{array}
+\usepackage{mversion}                       % Версионирование
+\TableInChaper                              % таблицы будут нумероваться в пределах раздела
+\PicInChaper                                % рисунки будут нумероваться в пределах раздела
+\setlength\GostItemGap{2mm}                 % для красоты можно менять от 0мм
+\sloppy                                     % переносы
+
+\newcounter{MinoreCounter}                  % Новый счетчик минорных версий
+\setcounter{MinoreCounter}{1}               % Текущая минорная версия
+
+\renewcommand{\theequation}{(\arabic{chapter}.\arabic{equation})}   % Формат нумерации формул "Глава.номер"
+\renewcommand{\version}{\versionnumber.\theMinoreCounter.\thebuildcounter} % Формат версии
+
+\makeatletter
+\@addtoreset{equation}{chapter}             % Счетчик формул
+\makeatother
+
+\setcounter{page}{3}                        % Начало нумерации страниц
+\setVersion{0}                              % Текущая мажорная версия
+\increaseBuild                              % Увеличивать номер сборки при каждой компиляции
+%<------------- НАЧАЛО ДОКУМЕНТА ---------------------------
+
+
+\begin{document}
+\tableofcontents
+
+\begin{center}
+Текущая версия документа: \version~от \today 
+\end{center}
+
+% Это самый главный файл документа, тут лучше ничего не писать, а только собирать
+\input{chapter1/chapter1} 
+
+
+\end{document}

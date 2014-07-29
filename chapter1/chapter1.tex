@@ -1,0 +1,60 @@
+\chapter{Название главы}
+
+\begin{itemize}
+	\item пункт 1
+	\item пункт 2
+	\item пункт 3
+	\begin{itemize}
+		\item подпункт 1
+		\item подпункт 1
+		\item подпункт 1
+	\end{itemize}
+	\item пункт 4
+\end{itemize}
+
+\section{Секция}
+\subsection{Подсекция}
+\subsubsection{ПодПодсекция}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.6]{./image/1.jpg}
+\end{center}
+\caption{Картина}
+\end{figure}
+
+\textit{курсив}, \textbf{жирный}\footnote{сноска} , \verb\моноширный\, 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras cursus neque vel libero iaculis vehicula. 
+продолжаем текст на этой же строке
+
+Что бы сделать новый абзац надо дважды поставить символ переноса строки(Enter) Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+
+Вот так, опять новый абзац Lorem ipsum dolor sit amet, cursus consectetur venenatis. Fusce blandit orci a neque ultrices, id vestibulum risus scelerisque. Sed at magna odio.
+
+Если надо вставить отдельно какой то код то делаем так:
+\begin{verbatim}
+class Mid{
+/*
+ * Какой то комментарий
+ */
+public:
+	// Константы при работе с группами портов
+	static const unsigned int GROUP_ALL = 0x0;
+	static const unsigned int GROUP_A = 0x1;
+	static const unsigned int GROUP_B = 0x2;
+	static const unsigned int GROUP_C = 0x3;
+	static const unsigned int GROUP_D1 = 0x4;
+\end{verbatim}
+
+Теперь формулы, если надо вставить формулу с нумерацией, то тогда так:
+\begin{equation}\label{Example} %это название ссылки на эту формулу
+k^{10^{-6}} = \sqrt{\frac{Q_{i}}{10^{12}}}
+\end{equation}
+или мы хотим в тексте вставить формулу без номера $ \forall x \in \Re ~\exists y, ~y_{i} \neq \int \sum^{0}_{i} $
+
+Да, знак \verb\~\ означает неразрывный пробел, а если надо ввести какой то служебный символ латеха, чтобы он не обрабатывался, ставится обратный слеш, например \%
+
+Если надо сослаться на формулу \ref{Example}
+
+И на последок, что бы автоматически сгенерировалось оглавление и ссылки, нужно дважды скомпилировать документ, через F1 или кнопку PDFLaTeX в Texmaker
