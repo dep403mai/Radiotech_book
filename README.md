@@ -37,3 +37,17 @@ pdflatex main.tex
 [Texmaker]:http://www.xm1math.net/texmaker/download.html
 
 - Vim, Sublime c наборами плагинов
+
+
+Всякие полезные ссылки
+-----------------------
+
+- [Столяров. Сверстай диплом красиво: LaTeX за три дня]
+- [git for Windows]
+- [tortoisegit]
+- [Небольшой HowTo по работе с git]:
+
+[Небольшой HowTo по работе с git]:http://www.webdelphi.ru/2010/07/dvcs-git-i-tortoisegit-v-kartinkax-posobie-dlya-nachinayushhix-chajnikov/
+[tortoisegit]:https://code.google.com/p/tortoisegit/
+[git for Windows]:http://git-scm.com/
+[Столяров. Сверстай диплом красиво: LaTeX за три дня]:http://www.stolyarov.info/books/pdf/latex3days.pdf
