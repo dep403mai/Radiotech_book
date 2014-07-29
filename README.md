@@ -23,7 +23,7 @@ Linux:
 Cборка
 -------
 ```
-pdflatex main.tex
+pdflatex Radiotech.tex
 ```
 [Введение в LaTeX для пользователей Windows]
 
